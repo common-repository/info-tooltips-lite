@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Plugin for Jelmer</title>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+	<script>
+		$(function() {
+			$(".meter > span").each(function() {
+				$(this)
+					.data("origWidth", $(this).width())
+					.width(0)
+					.animate({
+						width: $(this).data("origWidth")
+					}, 1200);
+			});
+		});
+	</script>
+    
+<style>
+	body {
+		font-family: sansation, arial, cambria;
+		color: gray;
+		text-align: center;
+		max-width: 316px;
+		margin: 25px auto 0 auto;
+		background-color: #fff;
+		border: solid 1px #4cb2e8;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+		border-radius: 7px;
+		/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	}
+	
+	img {
+		margin: 0 0 -18px 180px;	
+	}
+	
+	#title {
+		color: #fff;
+		padding: 5px;
+		text-shadow: 0px 1px 0px rgba(48, 113, 148, 1);
+		font-size: 9px;
+		border: solid 1px #4cb2e8;
+		-moz-border-radius: 4px 4px 0px 0px;
+		-webkit-border-radius: 4px 4px 0px 0px;
+		border-radius: 4px 4px 0px 0px;
+		/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#60c0f4', endColorstr = '#4bafe3');
+		/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+		/*Element must have a height (not auto)*/
+		/*All filters must be placed together*/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#60c0f4', endColorstr = '#4bafe3')";
+		/*Element must have a height (not auto)*/
+		/*All filters must be placed together*/
+		background-image: -moz-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: -ms-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: -o-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#60c0f4), to(#4bafe3));
+		background-image: -webkit-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: linear-gradient(top, #60c0f4, #4bafe3);
+		/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+
+
+}
+	
+	#communityGoal {
+		color: #4cb2e8;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	
+	.communityGoalNumbers {
+		display: block;
+		font-size: 18px;
+		-webkit-margin-before: 0.83em;
+		-webkit-margin-after: -16px;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+		font-weight: bold;
+}
+	.communityGoal {
+		font-weight: normal;
+		color: #5e5e5e;
+		font-size: 13px;
+		display: block;
+		-webkit-margin-before: 13px;
+		-webkit-margin-after: -30px;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0;
+	}
+	
+	#percentageBar {
+		color: white;
+		margin: 0 0 -10px 0;	
+		padding: 7px;
+		font-size: 11px;
+		font-variant: normal;
+	}
+	
+	.backgroundPercentageBar {
+		background-color: #5f5f5f;
+		padding: 7px 0 7px 0;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+	
+	}
+	
+	li {
+		display: inline;
+		text-align: -webkit-match-parent;
+		padding: 0px 15px 0px 15px;
+}
+
+	li + li {
+		border-left: 1px solid #69beec;
+	}
+
+	ul, menu, dir {
+		list-style-type:	none;
+		margin:	26px 0 26px 0;
+		padding: 16px 0px 0px 0px;
+		border-top: solid 1px #d4edf9;
+}
+	
+	#cycledKmNumbers {
+		color: #4cb2e8;	
+	}
+	
+	.greyColor {
+		color: #5e5e5e;
+	}
+	
+	.cycledKmNumbers {
+		display: block;
+		font-size: 18px;
+		font-weight: bold;
+}
+	.cycledKm {
+		color: #5e5e5e;
+		display: block;
+		font-size: 13px;
+		-webkit-margin-before: -17px;
+		-webkit-margin-after: 0;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+		font-weight: normal;	
+	}
+	
+	
+	#participants {
+		 color: #5e5e5e;	
+		 text-align: center;
+		 font-weight: normal;
+		 font-size: 13px;
+		 margin-top: -15px;
+	}
+	
+	.participantsKmNumbers {
+		color: #4cb3e8;
+		font-weight: bold;
+		font-size: 18px;	
+	}
+	
+	#daysLeft {
+		text-align: right;	
+	}
+	
+	#subFooter {
+		color: #fff;
+		font-size: 9px;
+		padding: 5px;
+		text-shadow: 0px 1px 0px rgba(48, 113, 148, 1);
+		border: solid 1px #4cb2e8;
+		border-bottom: solid 1px #4c9bc5;
+		-moz-border-radius: 4px 4px 0px 0px;
+		-webkit-border-radius: 4px 4px 0px 0px;
+		border-radius: 4px 4px 0px 0px;
+		/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+		-moz-box-shadow: 0px 1px #fff;
+		-webkit-box-shadow: 0px 1px #fff;
+		box-shadow: 0px 1px #fff;
+		filter: progid:DXImageTransform.Microsoft.Shadow(strength = 1, direction = 180, color = '#fff');
+		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength = 1, Direction = 180, Color = '#fff')";
+		/*Shadows look very different in IE (Only cardinal directions supported)*/
+		/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+		/*Element should have a background-color*/
+		/*All filters must be placed together*/
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#60c0f4', endColorstr = '#4bafe3');
+		/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+		/*Element must have a height (not auto)*/
+		/*All filters must be placed together*/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#60c0f4', endColorstr = '#4bafe3')";
+		/*Element must have a height (not auto)*/
+		/*All filters must be placed together*/
+		background-image: -moz-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: -ms-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: -o-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#60c0f4), to(#4bafe3));
+		background-image: -webkit-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: linear-gradient(top, #60c0f4, #4bafe3);
+		/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+
+	}
+	
+	#mainFooter {
+		color: #fff;
+		padding: 5px;
+		font-size: 9px;
+		text-shadow: 0px 1px 0px rgba(48, 113, 148, 1);
+		border: solid 1px #4cb2e8;
+		border-top: solid 1px #7cc8f1;
+		-moz-border-radius: 0px 0px 7px 7px;
+		-webkit-border-radius: 0px 0px 7px 7px;
+		border-radius: 0px 0px 7px 7px;
+		/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#60c0f4', endColorstr = '#4bafe3');
+		/*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
+		/*Element must have a height (not auto)*/
+		/*All filters must be placed together*/
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#60c0f4', endColorstr = '#4bafe3')";
+		/*Element must have a height (not auto)*/
+		/*All filters must be placed together*/
+		background-image: -moz-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: -ms-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: -o-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#60c0f4), to(#4bafe3));
+		background-image: -webkit-linear-gradient(top, #60c0f4, #4bafe3);
+		background-image: linear-gradient(top, #60c0f4, #4bafe3);
+		/*--IE9 DOES NOT SUPPORT CSS3 GRADIENT BACKGROUNDS--*/
+
+	}
+	
+		.meter { 
+			height: 30px;  /* Can be anything */
+			margin-top: 14px;
+			position: relative;
+			background: #555;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			-webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+			-moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+			box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+		}	
+	.meter > span {
+	display: block;
+	height: 100%;
+	   -webkit-border-top-right-radius: 2px;
+	-webkit-border-bottom-right-radius: 2px;
+	       -moz-border-radius-topright: 2px;
+	    -moz-border-radius-bottomright: 2px;
+	           border-top-right-radius: 2px;
+	        border-bottom-right-radius: 2px;
+	    -webkit-border-top-left-radius: 2px;
+	 -webkit-border-bottom-left-radius: 2px;
+	        -moz-border-radius-topleft: 2px;
+	     -moz-border-radius-bottomleft: 2px;
+	            border-top-left-radius: 2px;
+	         border-bottom-left-radius: 2px;
+	background-color: rgb(96,192,244);
+	background-image: -webkit-gradient(
+	  linear,
+	  left bottom,
+	  left top,
+	  color-stop(0, rgb(75, 175, 227)),
+	  color-stop(1, rgb(96,192,244))
+	 );
+	background-image: -webkit-linear-gradient(
+	  center bottom,
+	  rgb(75, 175, 227) 37%,
+	  rgb(96,192,244) 69%
+	 );
+	background-image: -moz-linear-gradient(
+	  center bottom,
+	  rgb(75, 175, 227) 37%,
+	  rgb(96,192,244) 69%
+	 );
+	background-image: -ms-linear-gradient(
+	  center bottom,
+	  rgb(75, 175, 227) 37%,
+	  rgb(96,192,244) 69%
+	 );
+	background-image: -o-linear-gradient(
+	  center bottom,
+	  rgb(75, 175, 227) 37%,
+	  rgb(96,192,244) 69%
+	 );
+	position: relative;
+	overflow: hidden;
+}
+
+.percentageText {
+	font-size: 14px;
+	position: fixed;
+	margin-top: -23px;
+	margin-left: 129px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+a:hover {
+	color: #555555;
+}
+
+</style>
+
+</head>
+
+<body>
+	<header id="title">
+    	<h1>Halton Hills Community<br>Bikes Challenge</h1>
+    </header>
+    
+    <section id="communityGoal">
+    	<h2 class="communityGoalNumbers">100,000 <span class="greyColor">KM</span></h2>
+        <h3 class="communityGoal">Community Goal</h3>
+    </section>
+    
+    <section id="percentageBar">
+    	<img src="cycler.png" title="cycler" width="55px" height"45px">
+        <div class="meter">
+			<span style="width: 15%"></span>
+		</div>
+        <p class="percentageText">85%</p>
+    </section>
+		
+    
+    <section id="cycledKmNumbers">
+		<h2 class="cycledKmNumbers">85,000 <span class="greyColor">KM</span></h2>
+        <h3 class="cycledKm">Cycled Kilometers</h3>
+    </section>
+    
+    <section id="participants">
+    	<ul>
+        <li><span class="participantsKmNumbers">45</span> Participants</li>
+        <li><span class="participantsKmNumbers">112 Days</span> Left</li>
+        </ul>
+    </section>
+    
+    <footer id="subFooter">
+    	<h2 class="noMargin"><a href="#">Log your kilometres</a></h2>
+    </footer>
+    
+    <footer id="mainFooter">
+    	<h2><a href="#">Register</a></h2>
+    </footer>
+
+    
+</body>
+</html>

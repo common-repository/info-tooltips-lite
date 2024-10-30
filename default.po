@@ -1,0 +1,234 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: default\n"
+"POT-Creation-Date: 2013-04-04 10:09+0200\n"
+"PO-Revision-Date: 2013-04-04 10:09+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: modules/cpt.php:4 modules/cpt.php:16 modules/editor_plugin.js.php:37
+msgid "Tooltips"
+msgstr ""
+
+#: modules/cpt.php:5
+msgid "Tooltip"
+msgstr ""
+
+#: modules/cpt.php:6
+msgid "Add New"
+msgstr ""
+
+#: modules/cpt.php:7
+msgid "Add New Tooltip"
+msgstr ""
+
+#: modules/cpt.php:8
+msgid "Edit Tooltip"
+msgstr ""
+
+#: modules/cpt.php:9
+msgid "New Tooltip"
+msgstr ""
+
+#: modules/cpt.php:10
+msgid "All Tooltips"
+msgstr ""
+
+#: modules/cpt.php:11
+msgid "View Tooltip"
+msgstr ""
+
+#: modules/cpt.php:12
+msgid "Search Tooltip"
+msgstr ""
+
+#: modules/cpt.php:13
+msgid "No Tooltip found"
+msgstr ""
+
+#: modules/cpt.php:14
+msgid "No Tooltip found in Trash"
+msgstr ""
+
+#: modules/hooks.php:110
+msgid "Please, fill \"Word (phrase) to apply\" field! "
+msgstr ""
+
+#: modules/meta_box.php:9
+msgid "Word to apply"
+msgstr ""
+
+#: modules/meta_box.php:22
+msgid "Use Tooltips"
+msgstr ""
+
+#: modules/meta_box.php:46
+msgid "Use Replacement in this post"
+msgstr ""
+
+#: modules/meta_box.php:49 modules/meta_box.php:99 modules/meta_box.php:153
+#: modules/meta_box.php:162 modules/meta_box.php:171 modules/settings.php:50
+#: modules/settings.php:58 modules/settings.php:66
+msgid "On"
+msgstr ""
+
+#: modules/meta_box.php:50 modules/meta_box.php:100 modules/meta_box.php:154
+#: modules/meta_box.php:163 modules/meta_box.php:172 modules/settings.php:51
+#: modules/settings.php:59 modules/settings.php:67
+msgid "Off"
+msgstr ""
+
+#: modules/meta_box.php:55
+msgid "Select tooltips you want to use in this post"
+msgstr ""
+
+#: modules/meta_box.php:63
+msgid ""
+"All occurences of word will be replaced with tooltip. You can select more "
+"one word with pressing CTRL + click on tooltip"
+msgstr ""
+
+#: modules/meta_box.php:73
+msgid "Word (phrase) to apply"
+msgstr ""
+
+#: modules/meta_box.php:75
+msgid ""
+"This word (phrase) will be used to add tooltip (this field should be unique "
+"for all tooltips)"
+msgstr ""
+
+#: modules/meta_box.php:77
+msgid "Block Width (px)"
+msgstr ""
+
+#: modules/meta_box.php:79
+msgid "Tooltip width"
+msgstr ""
+
+#: modules/meta_box.php:82
+msgid "Style"
+msgstr ""
+
+#: modules/meta_box.php:97
+msgid "Use Tooltip Shadow"
+msgstr ""
+
+#: modules/meta_box.php:105
+msgid "Show On"
+msgstr ""
+
+#: modules/meta_box.php:113
+msgid "Tooltiped word styling"
+msgstr ""
+
+#: modules/meta_box.php:122
+msgid "Advanced Word Styling"
+msgstr ""
+
+#: modules/meta_box.php:127
+msgid "Tooltiped hover word styling"
+msgstr ""
+
+#: modules/meta_box.php:136
+msgid "Advanced Word Hover Styling"
+msgstr ""
+
+#: modules/meta_box.php:139
+msgid "Block Position"
+msgstr ""
+
+#: modules/meta_box.php:141
+msgid "Top"
+msgstr ""
+
+#: modules/meta_box.php:142
+msgid "Top Right"
+msgstr ""
+
+#: modules/meta_box.php:143
+msgid "Right"
+msgstr ""
+
+#: modules/meta_box.php:144
+msgid "Bottom Right"
+msgstr ""
+
+#: modules/meta_box.php:145
+msgid "Bottom"
+msgstr ""
+
+#: modules/meta_box.php:146
+msgid "Bottom Left"
+msgstr ""
+
+#: modules/meta_box.php:147
+msgid "Left"
+msgstr ""
+
+#: modules/meta_box.php:148
+msgid "Top Leftt"
+msgstr ""
+
+#: modules/meta_box.php:151
+msgid "Use Rounded Corners"
+msgstr ""
+
+#: modules/meta_box.php:160
+msgid "Show Tooltip Title"
+msgstr ""
+
+#: modules/meta_box.php:168
+msgid "Show Title Close Button"
+msgstr ""
+
+#: modules/settings.php:6 modules/settings.php:13
+msgid "Settings"
+msgstr ""
+
+#: modules/settings.php:16
+msgid "Settings saved successfully"
+msgstr ""
+
+#: modules/settings.php:46
+msgid "Where to use tooltip functionality ?"
+msgstr ""
+
+#: modules/settings.php:48
+msgid "Frontpage"
+msgstr ""
+
+#: modules/settings.php:56
+msgid "Archive"
+msgstr ""
+
+#: modules/settings.php:64
+msgid "Single Post"
+msgstr ""
+
+#: modules/settings.php:82
+msgid "Save"
+msgstr ""
+
+#: modules/widgets.php:12
+msgid "A Foo Widget"
+msgstr ""
+
+#: modules/widgets.php:23
+msgid "Hello, World!"
+msgstr ""
+
+#: modules/widgets.php:39
+msgid "New title"
+msgstr ""
+
+#: modules/widgets.php:43
+msgid "Title:"
+msgstr ""
